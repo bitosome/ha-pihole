@@ -1,0 +1,48 @@
+name: Pi-hole
+version: "0.1.0"
+slug: pihole
+description: Source-built Pi-hole with private encrypted DNS for your phone
+url: https://github.com/bitosome/ha-pihole
+arch:
+  - amd64
+init: false
+startup: services
+boot: auto
+backup: cold
+webui: http://[HOST]:[PORT:80]/admin/
+ports:
+  53/tcp: null
+  53/udp: null
+  80/tcp: 8092
+ports_description:
+  53/tcp: Optional LAN DNS. Never forward this port to the Internet.
+  53/udp: Optional LAN DNS. Never forward this port to the Internet.
+  80/tcp: Password-protected administration and secret-protected phone DNS
+options:
+  timezone: Europe/Tallinn
+  public_hostname: pihole.example.com
+  admin_password: ""
+  doh_enabled: false
+  doh_token: ""
+  upstream_dns:
+    - tls://dns.quad9.net
+  bootstrap_dns:
+    - 9.9.9.9:53
+    - 149.112.112.112:53
+  privacy_level: 3
+  blocklists:
+    - https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.txt
+    - https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+schema:
+  timezone: str
+  public_hostname: str
+  admin_password: password
+  doh_enabled: bool
+  doh_token: password
+  upstream_dns:
+    - str
+  bootstrap_dns:
+    - str
+  privacy_level: int(0,3)
+  blocklists:
+    - url

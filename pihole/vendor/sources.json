@@ -1,0 +1,18 @@
+{
+  "start.sh": {
+    "url": "https://raw.githubusercontent.com/pi-hole/docker-pi-hole/2026.10.0/src/start.sh",
+    "sha256": "8341b2dfbfe33848050feee43cd257a09edc3eaca66856bbf1e8e96ea246d113"
+  },
+  "bash_functions.sh": {
+    "url": "https://raw.githubusercontent.com/pi-hole/docker-pi-hole/2026.10.0/src/bash_functions.sh",
+    "sha256": "205bc67d370d1e7eab0a054c5f2dafd1142a392c646456ce10989c09477dbd49"
+  },
+  "prefix-time.sh": {
+    "url": "https://raw.githubusercontent.com/pi-hole/docker-pi-hole/2026.10.0/src/prefix-time.sh",
+    "sha256": "bbad794e87b7dfb9e24b8718bd6cb3bc677963d8f6d3ae5aaa27f434e313d379"
+  },
+  "crontab.txt": {
+    "url": "https://raw.githubusercontent.com/pi-hole/docker-pi-hole/2026.10.0/src/crontab.txt",
+    "sha256": "47ac7fd37a0754d5a535b2cd5f4da40ab090dffc04ca76af76200e8377028150"
+  }
+}
